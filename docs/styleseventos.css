@@ -1,0 +1,158 @@
+#hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Promo centrada */
+.promo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+
+/* Video de fondo */
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa de oscurecimiento del video */
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+/* ----- CAJA HAPPY HOUR ----- */
+.happy-hour {
+  max-width: 700px;
+  position: relative;
+  overflow: hidden;
+  background-color: #0d0c09 !important;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.happy-hour:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagen con degradado */
+.happy-hour .col-md-6:first-child {
+  position: relative;
+  overflow: hidden;
+}
+
+.happy-hour img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 0 0 12px;
+  position: relative;
+  z-index: 0;
+}
+
+/* Degradado de izquierda a derecha */
+.happy-hour .col-md-6:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,transparent,#0d0c09);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenido */
+.happy-hour .contenido {
+  padding: 20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Botón */
+.btn-reservar {
+  background-color: #8b3a2b;
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 8px 40px;
+  margin: 10px auto 0;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+  background-color: #a34934;
+}
+
+.btn-separacion {
+  letter-spacing: 2px !important;
+}
+
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 768px) {
+  .promo {
+    padding-top: 200px;
+    width: 90%;
+  }
+
+  .happy-hour {
+    flex-direction: column; /* imagen arriba, texto abajo */
+    max-width: 90%;
+  }
+
+  .happy-hour img {
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .happy-hour .contenido {
+    padding: 15px;
+  }
+
+  .btn-reservar {
+    padding: 6px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo {
+    padding-top: 150px;
+  }
+
+  .btn-reservar {
+    width: 100%;
+  }
+}
+
+

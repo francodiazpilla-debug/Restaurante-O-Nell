@@ -1,0 +1,101 @@
+.card1-fondo {
+    background-image: url('Multimedia/Cards/Local1.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 400px !important;
+    position: relative;
+}
+.card2-fondo{
+    background-image: url('Multimedia/Cards/Local2.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 400px !important;
+    position: relative;
+}
+.card1-reserva {
+    background-image: url('Multimedia/Cards/Local1.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 800px !important;
+    position: relative;
+}
+.card2-reserva{
+    background-image: url('Multimedia/Cards/Local2.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 800px !important;
+    position: relative;
+}
+.card3-reserva {
+    background-image: url('Multimedia/Cards/Restaurante\ 3.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 800px !important;
+    position: relative;
+}
+.card4-reserva{
+    background-image: url('Multimedia/Cards/Restaurante4\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 800px !important;
+    position: relative;
+}
+
+.card-fondo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+.card-body {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+.card1-fondo,
+.card2-fondo {
+  transition: transform 0.6s ease; /* suaviza el zoom */
+  overflow: hidden; /* evita que se salga el contenido */
+}
+
+.card1-fondo:hover,
+.card2-fondo:hover {
+  transform: scale(1.05); /* hace zoom */
+}
+
+
+.btn-reservar {
+  background-color: #8B3A2B;   /* Color marrón rojizo similar al de la imagen */
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 10px 60px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+  background-color: #a34934;  /* tono más claro al pasar el mouse */
+}
+
+.btn-separacion{
+    letter-spacing: 3px !important;
+}
+
+
+@media (max-width: 576px) { 
+    .card-fondo{
+        height: 300px !important;
+    }
+}
